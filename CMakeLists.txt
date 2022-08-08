@@ -19,6 +19,7 @@ add_executable(2ref-ex 2/ref-ex.cc)
 add_executable(2Sales_data 2/Sales_data.cc)
 add_executable(2scope_levels 2/scope_levels.cc)
 add_executable(2unsigned 2/unsigned.cc)
+add_executable(2concurssivePower 2/concurssivePower.cpp)
 
 add_executable(arrRet 6/arrRet.cc)
 add_executable(errMsg_initList 6/errMsg_initList.cc)
