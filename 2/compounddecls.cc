@@ -4,16 +4,16 @@
 int main()
 {
 	// i is an int; p is a pointer to int; r is a reference to int
-	int i = 1024, *p = &i, &r = i;
+	int i = 1024, *p = &i, &r = i, &dummy = i; //i 可以有很多个不同的名字
 	
 	// three ways to print the value of i
-	std::cout << i << " " <<  *p <<  " " << r << std::endl;
+	std::cout << i << " " <<  *p <<  " " << r << " r "<< dummy <<"= dummy"<< std::endl;
 
 	int j = 42, *p2 = &j;
 	int *&pref = p2;  // pref is a reference to the pointer p2
 
 	// prints the value of j, which is the int to which p2 points
-	std::cout << *pref << std::endl;
+	std::cout << *pref <<" *pref"<< std::endl ;
 	
 	// pref refers to a pointer; assigning &i to pref makes p point to i
 	pref = &i; 
