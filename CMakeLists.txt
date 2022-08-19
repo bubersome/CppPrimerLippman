@@ -38,3 +38,21 @@ add_executable(reset 6/reset.cc)
 add_executable(stl-arr-fcns 6/stl-arr-fcns.cc)
 add_executable(usefcnptr 6/usefcnptr.cc)
 add_executable(wdebug 6/wdebug.cc)
+
+add_executable(16compare 16/compare.cc)
+add_executable(Array 16/Array.cc)
+
+
+#target_include_directories(18book PRIVATE 16)
+#file(GLOB source_files CONFIGURE_DEPENDS
+#        "16/Sales_data.h"
+#        "bookexcept.h"
+#
+#        )
+include_directories("16")
+add_executable(
+        18book 18/book.cc
+        16/Sales_data.h
+)
+#add_library("../16")
+#set(HEADER_FILES )

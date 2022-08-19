@@ -24,15 +24,15 @@ int main()
     cout << compare(vec1, vec2) << endl; // T is vector<int>
 
     long l1, l2;
-    int i1, i2;
-    compare(i1, i2);      // instantiate compare(int, int)
-    compare(l1, l2);      // instantiate compare(long, long)
-	compare<int>(i1, l2); // uses compare(int, int)
-	compare<long>(i1, l2);// uses compare(long, long)
+    int i1=16, i2;
+    cout << compare(i1, i2)<< endl;      // instantiate compare(int, int)
+    cout << compare(l1, l2)<< endl;      // instantiate compare(long, long)
+    cout << compare<int>(i1, l2)<< endl; // uses compare(int, int)
+    cout << compare<long>(i1, l2)<< endl;// uses compare(long, long)
 
     const char *cp1 = "hi", *cp2 = "world";
-    compare(cp1, cp2);          // calls the specialization
-    compare<string>(cp1, cp2);  // converts arguments to string
+    cout << compare(cp1, cp2)<< endl;          // calls the specialization
+    cout << compare<string>(cp1, cp2)<< endl;  // converts arguments to string
 
     return 0;
 }

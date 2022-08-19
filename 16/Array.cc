@@ -48,8 +48,8 @@ int main()
 		squares[i] = i*i; // instantiates Blob<int>::operator[](size_t)
     cout << squares << endl;
 
-	// instantiates the Blob<int> constructor that has
-	// two vector<long>::iterator parameters
+	 cout<< "instantiates the Blob<int> constructor that has "
+     "two vector<long>::iterator parameters"<<endl;
 	vector<long> vl = {0,1,2,3,4,5,6,7,8,9};
 	Blob<int> a1(vl.begin(), vl.end());   // copy from a vector
 

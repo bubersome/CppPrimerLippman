@@ -2,25 +2,31 @@
 
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-	unsigned u = 10, u2 = 42;
-	std::cout << u2 - u << std::endl;  
-	std::cout << u - u2 << std::endl; 
+	unsigned u = 10, u2 = 42, u3=-1;
+    long double li = 0;
+    cout << 0 + u3 << endl; //11111111111111111111111111111111  4294967295
+    cout << li + u3 << "\n" << endl; //11111111111111111111111111111111  4294967295
+	std::cout << u2 - u << std::endl;
+	std::cout << u - u2 << "\n"<< std::endl;
 
 	int i = 10, i2 = 42;
-	std::cout << i2 - i <<"\n"<< std::endl;
-	std::cout << i - i2 << std::endl;
+	std::cout << i2 - i << std::endl;
+	std::cout << i - i2 << "\n"<< std::endl;
 
 	u = 42;
 	i = 10;
 	std::cout << i - u << std::endl;
-	std::cout << u - i << std::endl;
+	std::cout << u - i << "\n"<< std::endl;
 
 	u = 10;
 	i = -42;
 	std::cout << i + i << std::endl;  // prints -84
-	std::cout << u + i << std::endl;  // if 32-bit ints, prints 4294967264
+	std::cout << "if 32-bit ints, prints 4294967264" << std::endl;  //
+	std::cout << u + i << "\n"<< std::endl;  // if 32-bit ints, prints 4294967264
 
 	i = 10;
 	std::cout << "good" << std::endl;
