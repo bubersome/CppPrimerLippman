@@ -1,4 +1,4 @@
-
+// decltype 2.5.3
 
 #include <iostream>
 using std::cout; using std::endl;

@@ -1,4 +1,4 @@
-
+//6.2.2
 
 #include <iostream>
 using std::cin; using std::cout; using std::endl;
@@ -56,6 +56,7 @@ int main()
 {
 	
 	string s;
+    s = {"dsfsdfo"};
 	getline(cin, s); 
 	size_t ctr = 0;
 	auto index = find_char(s, 'o', ctr);
@@ -66,15 +67,15 @@ int main()
 	// read values into ivec
 	while (cin >> i)
 		ivec.push_back(i);
-
+    cout<< ivec.size() <<endl;
 	// for each value in the list of ints
-	for (auto i : {42, 33, 92}) {
-		auto it = find_val(ivec.begin(), ivec.end(), i, ctr);
+	for (auto iTargetList : {42, 33, 92}) {
+		auto it = find_val(ivec.begin(), ivec.end(), iTargetList, ctr);
 		if (it == ivec.end())
-			cout << i << " is not in the input data" << endl;
+			cout << iTargetList << " is not in the input data" << endl;
 		else
-			cout << i << " was at position " 
-			     << it - ivec.begin() << endl;
+			cout << iTargetList << " was at position "
+                 << it - ivec.begin() << endl;
 	}
 
 	return 0;

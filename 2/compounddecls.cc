@@ -11,7 +11,7 @@ int main()
 
 	int j = 42, *p2 = &j;
 	std::cout << "int j = 42, *p2 = &j *&pref = p2 =" ;
-	int *&pref = p2;  // pref is a reference to the pointer p2
+	int *&pref = p2;  // bounding printers, pref is a reference to the pointer p2
 
 	// prints the value of j, which is the int to which p2 points
 	std::cout << *pref <<" *pref"<< std::endl ;
