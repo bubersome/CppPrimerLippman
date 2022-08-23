@@ -1,4 +1,4 @@
-
+//3.2.2 Reading and unknown number of string s
 
 #include <iostream> 
 using std::cin; using std::cout; using std::endl;

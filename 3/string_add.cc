@@ -1,4 +1,4 @@
-
+// 3.2.2
 
 #include <iostream>
 using std::cout; using std::endl;
@@ -12,7 +12,7 @@ int main()
 	string s1  = "hello, ", s2 = "world\n";
 	string s3 = s1 + s2;   // s3 is hello, world\n
 	cout << s1 << s2 << s3 << endl;
-
+    cout << s1[2,4] <<endl;
 	s1 += s2;   // equivalent to s1 = s1 + s2
 	cout << s1;
 	

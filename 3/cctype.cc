@@ -1,4 +1,4 @@
-
+//3.2.3
 
 #include <string>
 using std::string;
@@ -13,13 +13,16 @@ using std::cout; using std::endl;
 
 int main()
 {
-	string s("Hello World!!!");
+	string s("Hello World!!!1");
 	// punct_cnt has the same type that s.size returns
-	decltype(s.size()) punct_cnt = 0; 
-	
+	decltype(s.size()) punct_cnt = 0;
+//	unsigned punct_cnt = 0;
+
 	// count the number of punctuation characters in s
-	for (auto c : s)         // for every char in s
-		if (ispunct(c))      // if the character is punctuation
+//	for (char c : s)         // for every char in s
+	for (char &c : s)         // for every char in s
+//		if (ispunct(c))      // if the character is punctuation
+		if (ispunct(*&c))      // if the character is punctuation
 			++punct_cnt;     // increment the punctuation counter
 	
 	cout << punct_cnt 
@@ -27,14 +30,14 @@ int main()
 	
 	// convert s to uppercase
 	string orig = s;
-	for (auto &c : s)   // for every char in s (note: c is a reference)
+	for (char &c : s)   // for every char in s (note: c is a reference)
 		// c is a reference, so this assignment changes the char in s
 		c = toupper(c);
 	cout << s << endl;
 	
 	// convert first word in s to uppercase
 	s = orig;  // restore s to original case
-	decltype(s.size()) index = 0;
+	auto index = 0;
 
 	// process characters in s until we run out of characters 
 	// or we hit a whitespace

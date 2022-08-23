@@ -1,4 +1,4 @@
-
+//3.6
 
 #include <iterator>
 using std::begin; using std::end;
